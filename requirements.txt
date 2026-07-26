@@ -1,4 +1,4 @@
-Flask
-flask-cors
-edge-tts
-requests
+Flask==2.3.3
+flask-cors==4.0.0
+edge-tts==6.1.11
+requests==2.31.0
