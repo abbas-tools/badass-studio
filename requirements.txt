@@ -1,5 +1,4 @@
 Flask
 flask-cors
 edge-tts
-Pillow
 requests
