@@ -1,1 +1,186 @@
+:root {
+    --bg-color: #070913;
+    --card-bg: rgba(18, 22, 38, 0.75);
+    --primary-glow: #ff2a5f;
+    --secondary-glow: #00f2fe;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.08);
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 42, 95, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 242, 254, 0.12) 0%, transparent 40%);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 750px;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 
+                0 0 40px rgba(255, 42, 95, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ff2a5f, #ff7e5f, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(255, 42, 95, 0.4);
+    margin-bottom: 8px;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 6px;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    background: transparent;
+    color: var(--text-muted);
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.tab-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #ff2a5f, #ff5e62);
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 42, 95, 0.5);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+textarea, select, input[type="file"] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(7, 9, 19, 0.8);
+    border: 1px solid var(--border-color);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+textarea:focus, select:focus, input[type="file"]:focus {
+    border-color: #ff2a5f;
+    box-shadow: 0 0 15px rgba(255, 42, 95, 0.25);
+}
+
+input[type="file"] {
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+button {
+    background: linear-gradient(135deg, #ff2a5f, #ff5e62);
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(255, 42, 95, 0.4);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 42, 95, 0.6);
+    background: linear-gradient(135deg, #ff4070, #ff7075);
+}
+
+.result-box {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--secondary-glow);
+}
+
+audio {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 30px;
+}
