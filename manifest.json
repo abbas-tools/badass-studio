@@ -1,0 +1,18 @@
+{
+  "background_color": "#0a0b10",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "badass-studio-ai-voice-generator.onrender",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "badass-studio",
+  "start_url": "/",
+  "theme_color": "#00f3ff",
+  "categories": [
+    "multimedia",
+    "productivity",
+    "utilities"
+  ],
+  "id": "/",
+  "description": "Best free AI text to audio generator studio"
+}
