@@ -15,7 +15,10 @@ import numpy as np
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 CORS(app)
-
+@app.route('/manifest.json')
+def manifest():
+    return send_from_directory('.', 'manifest.json')
+    
 # Configure upload folders
 UPLOAD_FOLDER = 'static/uploads'
 AUDIO_FOLDER = 'static/audio'
